@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme - Pastel purple background */
+    --background: 243 100% 97%; /* #F2F1FF - pastel purple */
+    --foreground: 265 100% 5%; /* #0B001A - very dark purple text */
+    --card: 243 100% 99%; /* Slightly lighter than background */
+    --card-foreground: 265 100% 5%;
+    --popover: 243 100% 99%;
+    --popover-foreground: 265 100% 5%;
+    --primary: 265 54% 14%; /* #201036 - dark purple (button bg) */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --secondary: 243 60% 90%; /* Lighter purple for secondary */
+    --secondary-foreground: 265 100% 5%;
+    --muted: 243 40% 92%; /* Very light purple for muted */
+    --muted-foreground: 265 30% 45%; /* Medium purple-gray for muted text */
+    --accent: 243 70% 88%; /* Slightly darker purple for accent */
+    --accent-foreground: 265 100% 5%;
+    --destructive: 0 84.2% 60.2%; /* Keep red for destructive */
+    --destructive-foreground: 0 0% 100%;
+    --border: 243 50% 85%; /* Light purple border */
+    --input: 243 50% 85%;
+    --ring: 265 54% 14%; /* Dark purple for focus ring */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark theme - Dark purple background */
+    --background: 265 54% 14%; /* #201036 - dark purple */
+    --foreground: 243 100% 97%; /* Pastel purple text */
+    --card: 265 50% 18%; /* Slightly lighter dark purple */
+    --card-foreground: 243 100% 97%;
+    --popover: 265 50% 18%;
+    --popover-foreground: 243 100% 97%;
+    --primary: 243 100% 97%; /* Pastel purple as primary in dark mode */
+    --primary-foreground: 265 54% 14%; /* Dark purple text on primary */
+    --secondary: 265 40% 25%; /* Medium purple for secondary */
+    --secondary-foreground: 243 100% 97%;
+    --muted: 265 35% 22%; /* Dark muted purple */
+    --muted-foreground: 243 50% 75%; /* Light purple-gray for muted text */
+    --accent: 265 45% 28%; /* Slightly lighter purple for accent */
+    --accent-foreground: 243 100% 97%;
+    --destructive: 0 72% 55%; /* Slightly darker red for dark mode */
+    --destructive-foreground: 0 0% 100%;
+    --border: 265 40% 25%; /* Medium purple border */
+    --input: 265 40% 25%;
+    --ring: 243 100% 97%; /* Pastel purple for focus ring */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
