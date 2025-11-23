@@ -8,6 +8,8 @@ const config: StorybookConfig = {
   "framework": {
     "name": "@storybook/react-vite",
     "options": {}
-  }
+  },
+  // Base path for GitHub Pages deployment
+  ...(process.env.NODE_ENV === 'production' && { base: '/component-hub/' }),
 };
 export default config;
